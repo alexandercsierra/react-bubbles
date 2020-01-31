@@ -3,7 +3,7 @@ import {axiosWithAuth} from '../utils/axiosWIthAuth'
 
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
-import AddForm from './AddForm'
+
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
@@ -24,7 +24,7 @@ const BubblePage = () => {
     <>
       <ColorList colors={colorList} updateColors={setColorList} />
       <Bubbles colors={colorList} />
-      <AddForm updateColors={setColorList}/>
+      
     </>
   );
 };

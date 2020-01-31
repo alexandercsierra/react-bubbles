@@ -10,9 +10,9 @@ import "./styles.scss";
 function App() {
   return (
     <Router>
-
+      <Nav/>
       <div className="App">
-        <Nav/>
+        
         <Route exact path="/" component={Login} />
         {/* 
           Build a PrivateRoute component that will 

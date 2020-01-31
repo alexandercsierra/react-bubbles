@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import {axiosWithAuth} from '../utils/axiosWIthAuth'
+import AddForm from './AddForm'
+import styled from 'styled-components'
+
+const FormDiv = styled.div`
+  margin: 4% auto;
+
+`;
 
 
 const initialColor = {
@@ -99,8 +106,13 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
+      <FormDiv>
+        <AddForm updateColors={updateColors}/>
+      </FormDiv>
+      
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
+      
     </div>
   );
 };
