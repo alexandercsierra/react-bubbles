@@ -21,10 +21,13 @@ const Login = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axiosWithAuth().post('/api/login', user)
-      .then(res=>console.log(res))
+      .then(res=>{
+        localStorage.setItem('token', res.data.payload);
+        history.push('/bubblepage');
+      })
       .catch(err=>console.log(err))
 
-    // history.push('/bubbles')
+    
   }
 
 
